@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaPresentacion", "CapaPresentacion\CapaPresentacion.csproj", "{21E93635-5684-4EA9-9141-5D8691DFE751}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaNegocio", "CapaNegocio\CapaNegocio.csproj", "{37E1F966-05EB-4E83-B2CB-E7C2B402B9DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDatos", "CapaDatos\CapaDatos.csproj", "{DAC9868D-FDCD-47A3-A527-F37107B74EFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaEntidad", "CapaEntidad\CapaEntidad.csproj", "{6BA2761B-D61B-4FB3-8EE7-1E1389BD0A07}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BaseDatos", "BaseDatos", "{70882E2B-DDFB-412F-89CB-DF809125F740}"
+	ProjectSection(SolutionItems) = preProject
+		BaseDatos\00_instalar_todo.sql = BaseDatos\00_instalar_todo.sql
+		BaseDatos\01_crear_base.sql = BaseDatos\01_crear_base.sql
+		BaseDatos\02_tablas.sql = BaseDatos\02_tablas.sql
+		BaseDatos\03_datos_prueba.sql = BaseDatos\03_datos_prueba.sql
+		BaseDatos\04_vistas_y_consultas.sql = BaseDatos\04_vistas_y_consultas.sql
+		BaseDatos\05_procedimientos_almacenados.sql = BaseDatos\05_procedimientos_almacenados.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentacion", "Documentacion", "{5D34E2B4-E49D-47CA-AF55-3D5BF27B7A6D}"
+	ProjectSection(SolutionItems) = preProject
+		Documentacion\Mapa_del_codigo.md = Documentacion\Mapa_del_codigo.md
+		Documentacion\Modelo_de_datos.md = Documentacion\Modelo_de_datos.md
+		Documentacion\Reglas_de_negocio.md = Documentacion\Reglas_de_negocio.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6BA2761B-D61B-4FB3-8EE7-1E1389BD0A07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BA2761B-D61B-4FB3-8EE7-1E1389BD0A07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BA2761B-D61B-4FB3-8EE7-1E1389BD0A07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BA2761B-D61B-4FB3-8EE7-1E1389BD0A07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAC9868D-FDCD-47A3-A527-F37107B74EFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAC9868D-FDCD-47A3-A527-F37107B74EFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAC9868D-FDCD-47A3-A527-F37107B74EFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAC9868D-FDCD-47A3-A527-F37107B74EFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37E1F966-05EB-4E83-B2CB-E7C2B402B9DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37E1F966-05EB-4E83-B2CB-E7C2B402B9DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37E1F966-05EB-4E83-B2CB-E7C2B402B9DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37E1F966-05EB-4E83-B2CB-E7C2B402B9DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21E93635-5684-4EA9-9141-5D8691DFE751}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21E93635-5684-4EA9-9141-5D8691DFE751}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21E93635-5684-4EA9-9141-5D8691DFE751}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21E93635-5684-4EA9-9141-5D8691DFE751}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AAD08E0A-036C-4C2E-9082-31A3EFA3F0D3}
+	EndGlobalSection
+EndGlobal
