@@ -1,8 +1,8 @@
-﻿using System;
+﻿using CapaEntidad;
+using CapaNegocio;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
-using CapaEntidad;
-using CapaNegocio;
 
 namespace CapaPresentacion
 {

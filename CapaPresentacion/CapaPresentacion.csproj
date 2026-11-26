@@ -18,9 +18,6 @@
     <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj" />
     <ProjectReference Include="..\CapaEntidad\CapaEntidad.csproj" />
   </ItemGroup>
-
-  <!-- Le indica a Visual Studio que estos archivos son formularios (para abrir el diseñador)
-       y que cada .Designer.cs pertenece a su formulario (se muestra anidado debajo). -->
   <ItemGroup>
     <Compile Update="frmLogin.cs">
       <SubType>Form</SubType>

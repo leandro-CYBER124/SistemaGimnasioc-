@@ -1,7 +1,7 @@
-﻿using System;
+﻿using CapaEntidad;
+using System;
 using System.Data;
 using System.Data.SqlClient;
-using CapaEntidad;
 
 namespace CapaDatos
 {
@@ -34,7 +34,7 @@ namespace CapaDatos
         }
 
         /// <summary>Registra un socio nuevo. Devuelve "" si salió bien o el mensaje de error (ej.: DNI repetido).</summary>
-        public string Registrar(Socio socio)
+        public string Registrar(Socio socio, int idUsuario)
         {
             SqlParameter mensaje = Conexion.ParametroMensaje();
 
@@ -46,6 +46,7 @@ namespace CapaDatos
                 Conexion.Parametro("@Email", socio.Email),
                 Conexion.Parametro("@IdPlan", socio.IdPlan),
                 Conexion.Parametro("@Estado", socio.Estado),
+                Conexion.Parametro("@IdUsuario", idUsuario),
                 mensaje);
 
             return Convert.ToString(mensaje.Value);

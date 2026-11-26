@@ -1,6 +1,7 @@
-﻿using System.Data;
-using CapaDatos;
+﻿using CapaDatos;
 using CapaEntidad;
+using System.Data;
+using System.Text.RegularExpressions;
 
 namespace CapaNegocio
 {
@@ -29,7 +30,7 @@ namespace CapaNegocio
         /// Valida y guarda el socio. Devuelve el mensaje de error, o "" si se guardó bien.
         /// Por qué devuelve un texto: así la pantalla solo muestra el mensaje, sin decidir nada.
         /// </summary>
-        public string Guardar(Socio socio)
+        public string Guardar(Socio socio, int idUsuario)
         {
             socio.Dni = socio.Dni.Trim();
             socio.Nombre = socio.Nombre.Trim();
@@ -41,13 +42,17 @@ namespace CapaNegocio
             if (socio.Nombre == "") return "Ingresá el nombre.";
             if (socio.Apellido == "") return "Ingresá el apellido.";
             if (socio.IdPlan == 0) return "Elegí un plan.";
+            if (socio.Telefono != "" && Regex.IsMatch(socio.Telefono, @"^\d{7,15}$") == false)
+                return "Ingresá un teléfono válido (de 7 a 15 números).";
+            if (socio.Email != "" && Regex.IsMatch(socio.Email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$") == false)
+                return "Ingresá un correo electrónico válido.";
 
             Plan plan = datosPlan.ObtenerPorId(socio.IdPlan);
             if (plan.Estado == false) return "El plan elegido está dado de baja.";
 
             // Socio nuevo (IdSocio = 0): se registra. Socio existente: se edita.
             // El DNI repetido lo controla el procedimiento almacenado y devuelve el mensaje.
-            if (socio.IdSocio == 0) return datosSocio.Registrar(socio);
+            if (socio.IdSocio == 0) return datosSocio.Registrar(socio, idUsuario);
             return datosSocio.Editar(socio);
         }
 

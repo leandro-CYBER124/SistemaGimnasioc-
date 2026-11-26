@@ -1,8 +1,8 @@
-﻿using System;
+﻿using CapaEntidad;
+using CapaNegocio;
+using System;
 using System.Data;
 using System.Windows.Forms;
-using CapaEntidad;
-using CapaNegocio;
 
 namespace CapaPresentacion
 {
@@ -143,7 +143,7 @@ namespace CapaPresentacion
                 if (planElegido != null) socio.IdPlan = planElegido.IdPlan;
 
                 // PASO 2: la capa de negocio valida y guarda. Devuelve "" si salió bien o el mensaje de error.
-                string mensajeDeError = negocioSocio.Guardar(socio);
+                string mensajeDeError = negocioSocio.Guardar(socio, Sesion.Usuario.IdUsuario);
                 if (mensajeDeError != "")
                 {
                     MessageBox.Show(mensajeDeError, "Revisá los datos");

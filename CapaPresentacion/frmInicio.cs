@@ -1,8 +1,8 @@
-﻿using System;
+﻿using CapaEntidad;
+using CapaNegocio;
+using System;
 using System.Data;
 using System.Windows.Forms;
-using CapaEntidad;
-using CapaNegocio;
 using Charting = System.Windows.Forms.DataVisualization.Charting;
 
 namespace CapaPresentacion

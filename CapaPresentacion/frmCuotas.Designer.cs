@@ -1,11 +1,4 @@
-﻿// =====================================================================================
-// ARCHIVO DEL DISEÑADOR de frmCuotas: lo genera y mantiene Visual Studio.
-// Acá están TODOS los controles del formulario (botones, cuadros de texto, grillas...)
-// con su posición, tamaño, color y texto. Para modificar el aspecto conviene usar el
-// diseñador visual (clic derecho en frmCuotas.cs > Ver diseñador) y no editar este archivo a mano.
-// La lógica (qué hace cada botón) está en frmCuotas.cs.
-// =====================================================================================
-namespace CapaPresentacion
+﻿namespace CapaPresentacion
 {
     partial class frmCuotas
     {
